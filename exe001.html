@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Facebook</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(111, 109, 109);
+            color: rgb(159, 161, 162);
+            width:  200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        - inicio -
+    </div>
+
+    <script>
+        
+        let a = window.document.getElementById('area');
+        //window.document.getElementById. Sua função simplesmente retorna o elemento cujo atributo ID foi especificado, ou seja, Retorna a referência do elemento através do seu ID.
+
+        function clicar() {
+           a.innerText = 'Clicou!' // .innerText é uma propriedade que representa o conteúdo textual "renderizado" de um nó e seus descendentes.
+           a.style.background = 'green' // .style.background muda a cor do container indicado, no caso 'a'.
+        }
+
+        function entrar() {
+           a.innerText = '- Entrou -'
+        }
+
+        function sair() {
+           a.innerText = '- Saiu -'
+           a.style.background = 'gray' 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">   
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res"> Resultado </div>
+    <script>
+        function somar(){
+            let tn1 = window.document.getElementById('txtn1')
+            let tn2 = window.document.querySelector('input#txtn2')
+            let res = window.document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let soma = n1 + n2
+            res.innerHTML = `Resultado será  = <strong> ${soma}</strong>`
+        }
+    </script>
+    <h1>Multiplicando Valores</h1>
+    <input type="number" name="txtn10" id="txtn10"> x
+    <input type="number" name="txtn20" id="txtn20"> 
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+    <div id="resul"> Resultado </div>
+    <script>
+        function multiplicar(){
+            let tn10 = window.document.getElementById('txtn10')
+            let tn20 = window.document.querySelector('input#txtn20')
+            let resul = window.document.getElementById('resul')
+            let n10 = Number(tn10.value)
+            let n20 = Number(tn20.value)
+            let multi = n10 * n20
+            resul.innerHTML = `Resultado será  = <strong> ${multi}</strong>`
+        }
+    </script>
+</body>
+</html>
