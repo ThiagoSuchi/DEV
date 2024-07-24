@@ -1,9 +1,11 @@
-let a = window.document.getElementById('area');
+const a = window.document.getElementById('area');
+const audioBtn = new Audio('./sons/pause.mp3')
 //window.document.getElementById. Sua função simplesmente retorna o elemento cujo atributo ID foi especificado, ou seja, Retorna a referência do elemento através do seu ID.
 
 function clicar() {
    a.innerText = 'Clicou!' // .innerText é uma propriedade que representa o conteúdo textual "renderizado" de um nó e seus descendentes.
    a.style.background = 'green' // .style.background muda a cor do container indicado, no caso 'a'.
+   audioBtn.play()
 }
 
 function entrar() {
